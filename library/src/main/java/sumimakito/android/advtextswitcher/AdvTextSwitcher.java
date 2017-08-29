@@ -16,7 +16,7 @@ public class AdvTextSwitcher extends TextSwitcher {
   private Context mContext;
   private String[] mTexts = {};
   private int currentPos;
-  private InitTextView mInitTextView;
+  private TextView innerTextView;
   private Callback mCallback = new Callback() {
     @Override
     public void onItemClick(int position) {
@@ -42,20 +42,17 @@ public class AdvTextSwitcher extends TextSwitcher {
     ta.recycle();
     this.setFactory(new ViewFactory() {
       public View makeView() {
-        TextView innerText = new TextView(mContext);
-        innerText.setGravity(gravity);
-        innerText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
-        innerText.setTextColor(textColor);
-        innerText.setOnClickListener(new OnClickListener() {
+        innerTextView = new TextView(mContext);
+        innerTextView.setGravity(gravity);
+        innerTextView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
+        innerTextView.setTextColor(textColor);
+        innerTextView.setOnClickListener(new OnClickListener() {
           @Override
           public void onClick(View p1) {
             AdvTextSwitcher.this.onClick();
           }
         });
-        if (mInitTextView != null) {
-          mInitTextView.init(innerText);
-        }
-        return innerText;
+        return innerTextView;
       }
     });
 
@@ -95,7 +92,9 @@ public class AdvTextSwitcher extends TextSwitcher {
   }
 
   public void setInitTextView(InitTextView initTextView) {
-    mInitTextView = initTextView;
+    if (innerTextView != null) {
+      initTextView.init(innerTextView);
+    }
   }
 
   public void next() {

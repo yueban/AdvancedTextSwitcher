@@ -28,7 +28,7 @@ public class AdvTextSwitcher extends TextSwitcher {
     this.mContext = context;
     TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.AdvTextSwitcher);
 
-    final int textColor = a.getColor(R.styleable.AdvTextSwitcher_ts_textSize, Color.BLACK);
+    final int textColor = a.getColor(R.styleable.AdvTextSwitcher_ts_textColor, Color.BLACK);
     final float textSize = a.getDimensionPixelSize(R.styleable.AdvTextSwitcher_ts_textSize, 20);
     final int animInRes = a.getResourceId(R.styleable.AdvTextSwitcher_ts_animIn, R.anim.fade_in_slide_in);
     final int animOutRes = a.getResourceId(R.styleable.AdvTextSwitcher_ts_animOut, R.anim.fade_out_slide_out);

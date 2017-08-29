@@ -3,10 +3,12 @@ package sumimakito.android.advtextswitcher;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
+import android.view.ViewConfiguration;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.TextSwitcher;
@@ -31,7 +33,9 @@ public class AdvTextSwitcher extends TextSwitcher
 			R.attr.textSize,
 			android.R.attr.inAnimation,
 			android.R.attr.outAnimation,
-			R.attr.gravity
+			R.attr.gravity,
+			android.R.attr.lines,
+			android.R.attr.ellipsize,
 		};
 		TypedArray ta = context.obtainStyledAttributes(attrs, attrsArray);
 		final int textColor = ta.getColor(0, Color.BLACK);
@@ -46,6 +50,8 @@ public class AdvTextSwitcher extends TextSwitcher
 					(left?(Gravity.LEFT|Gravity.CENTER_VERTICAL)
 						:Gravity.NO_GRAVITY)
 			);
+    final int lines = ta.getInt(5, 1);
+    final int ellipsize = ta.getInt(6, 3);
 		ta.recycle();
 		this.setFactory(new ViewFactory() {
 				public View makeView()
@@ -54,6 +60,21 @@ public class AdvTextSwitcher extends TextSwitcher
 					innerText.setGravity(gravity);
 					innerText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
 					innerText.setTextColor(textColor);
+          innerText.setLines(lines);
+          switch (ellipsize) {
+            case 1:
+              innerText.setEllipsize(TextUtils.TruncateAt.START);
+              break;
+            case 2:
+              innerText.setEllipsize(TextUtils.TruncateAt.MIDDLE);
+              break;
+            case 3:
+              innerText.setEllipsize(TextUtils.TruncateAt.END);
+              break;
+            case 4:
+              throw new IllegalArgumentException("marquee is not supported");
+          }
+
 					innerText.setOnClickListener(new OnClickListener(){
 							@Override
 							public void onClick(View p1)
@@ -71,18 +92,18 @@ public class AdvTextSwitcher extends TextSwitcher
 		this.setInAnimation(animIn);
 		this.setOutAnimation(animOut);
 	}
-	
+
 	public void overrideText(String text){
 		this.setText(text);
 	}
-	
+
 	public void setAnim(int animInRes, int animOutRes){
 		Animation animIn = AnimationUtils.loadAnimation(mContext, animInRes);
 		Animation animOut = AnimationUtils.loadAnimation(mContext, animOutRes);
 		this.setInAnimation(animIn);
 		this.setOutAnimation(animOut);
 	}
-	
+
 	public void setAnim(Animation animIn, Animation animOut){
 		this.setInAnimation(animIn);
 		this.setOutAnimation(animOut);
@@ -97,7 +118,7 @@ public class AdvTextSwitcher extends TextSwitcher
 		}
 		updateDisp();
 	}
-	
+
 	public void setCallback(Callback callback){
 		this.mCallback = callback;
 	}
@@ -133,7 +154,7 @@ public class AdvTextSwitcher extends TextSwitcher
 			updateDisp();
 		}
 	}
-	
+
 	public interface Callback{
 		public void onItemClick(int position);
 	}
@@ -142,7 +163,7 @@ public class AdvTextSwitcher extends TextSwitcher
 	{
 		this.setText(mTexts[ currentPos ]);
 	}
-	
+
 	private void onClick(){
 		mCallback.onItemClick(currentPos);
 	}

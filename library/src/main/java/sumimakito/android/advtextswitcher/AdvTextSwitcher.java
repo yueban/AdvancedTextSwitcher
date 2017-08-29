@@ -132,6 +132,10 @@ public class AdvTextSwitcher extends TextSwitcher {
     }
   }
 
+  public boolean isEmpty() {
+    return mTexts == null || mTexts.length == 0;
+  }
+
   private void updateDisp() {
     this.setText(mTexts[currentPos]);
   }
@@ -142,9 +146,5 @@ public class AdvTextSwitcher extends TextSwitcher {
 
   public interface Callback {
     public void onItemClick(int position);
-  }
-
-  public interface InitTextView {
-    void init(TextView textView);
   }
 }

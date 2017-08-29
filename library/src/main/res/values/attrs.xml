@@ -1,11 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>  
-<resources>  
-    <declare-styleable name="app">   
-        <attr name="textSize" format="dimension" /> 
-		<attr name="gravity">
-			<flag name="right" value="0x01" />
-			<flag name="left" value="0x02" />
-			<flag name="center" value="0x03" />
-		</attr>
-	</declare-styleable>  
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AdvTextSwitcher">
+        <attr format="dimension" name="ts_textSize" />
+        <attr format="color" name="ts_textColor" />
+        <attr format="reference" name="ts_animIn" />
+        <attr format="reference" name="ts_animOut" />
+        <attr name="ts_gravity">
+            <flag name="right" value="0x01" />
+            <flag name="left" value="0x02" />
+            <flag name="center" value="0x03" />
+        </attr>
+        <attr format="integer" name="ts_lines" />
+        <attr name="ts_ellipsize">
+            <enum name="start" value="0" />
+            <enum name="middle" value="1" />
+            <enum name="end" value="2" />
+            <enum name="marquee" value="3" />
+        </attr>
+    </declare-styleable>
 </resources>  

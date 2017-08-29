@@ -46,7 +46,6 @@ public class AdvTextSwitcher extends TextSwitcher {
         innerText.setGravity(gravity);
         innerText.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
         innerText.setTextColor(textColor);
-        innerText.setSingleLine(true);
         innerText.setOnClickListener(new OnClickListener() {
           @Override
           public void onClick(View p1) {

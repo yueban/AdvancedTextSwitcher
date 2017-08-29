@@ -22,6 +22,7 @@ public class AdvTextSwitcher extends TextSwitcher {
     public void onItemClick(int position) {
     }
   };
+  private InitTextView mInitTextView;
 
   public AdvTextSwitcher(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -52,6 +53,9 @@ public class AdvTextSwitcher extends TextSwitcher {
             AdvTextSwitcher.this.onClick();
           }
         });
+        if (mInitTextView != null) {
+          mInitTextView.init(innerTextView);
+        }
         return innerTextView;
       }
     });
@@ -92,6 +96,7 @@ public class AdvTextSwitcher extends TextSwitcher {
   }
 
   public void setInitTextView(InitTextView initTextView) {
+    this.mInitTextView = initTextView;
     if (innerTextView != null) {
       initTextView.init(innerTextView);
     }

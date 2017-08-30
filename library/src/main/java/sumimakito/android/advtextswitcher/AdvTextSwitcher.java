@@ -144,6 +144,10 @@ public class AdvTextSwitcher extends TextSwitcher {
     mCallback.onItemClick(currentPos);
   }
 
+  public int getCurrentPos() {
+    return currentPos;
+  }
+
   public interface Callback {
     public void onItemClick(int position);
   }

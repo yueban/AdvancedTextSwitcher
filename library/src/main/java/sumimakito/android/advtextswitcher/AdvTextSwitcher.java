@@ -14,14 +14,11 @@ import android.widget.TextSwitcher;
 import android.widget.TextView;
 
 public class AdvTextSwitcher extends TextSwitcher {
+  private final boolean clickable;
   private Context mContext;
   private String[] mTexts = {};
   private int currentPos;
-  private Callback mCallback = new Callback() {
-    @Override
-    public void onItemClick(int position) {
-    }
-  };
+  private Callback mCallback;
 
   public AdvTextSwitcher(Context context, AttributeSet attrs) {
     super(context, attrs);
@@ -40,7 +37,7 @@ public class AdvTextSwitcher extends TextSwitcher {
         : (left ? (Gravity.LEFT | Gravity.CENTER_VERTICAL) : Gravity.NO_GRAVITY));
     final int lines = a.getInt(R.styleable.AdvTextSwitcher_ts_lines, -1);
     final int ellipsize = a.getInt(R.styleable.AdvTextSwitcher_ts_ellipsize, -1);
-
+    clickable = a.getBoolean(R.styleable.AdvTextSwitcher_clickable, true);
     a.recycle();
     this.setFactory(new ViewFactory() {
       public View makeView() {
@@ -65,12 +62,14 @@ public class AdvTextSwitcher extends TextSwitcher {
             innerText.setEllipsize(TextUtils.TruncateAt.MARQUEE);
             break;
         }
-        innerText.setOnClickListener(new OnClickListener() {
-          @Override
-          public void onClick(View p1) {
-            AdvTextSwitcher.this.onClick();
-          }
-        });
+        if (clickable) {
+          innerText.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View p1) {
+              AdvTextSwitcher.this.onClick();
+            }
+          });
+        }
         return innerText;
       }
     });
@@ -107,6 +106,9 @@ public class AdvTextSwitcher extends TextSwitcher {
   }
 
   public void setCallback(Callback callback) {
+    if (!clickable) {
+      throw new RuntimeException("clickable must be true when using callback");
+    }
     this.mCallback = callback;
   }
 
@@ -141,7 +143,9 @@ public class AdvTextSwitcher extends TextSwitcher {
   }
 
   private void onClick() {
-    mCallback.onItemClick(currentPos);
+    if (mCallback != null) {
+      mCallback.onItemClick(currentPos);
+    }
   }
 
   public int getCurrentPos() {

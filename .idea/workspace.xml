@@ -10,9 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bc9acc80-20d0-4492-babd-34bc4ea44bd1" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/Switcher.java" afterPath="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/Switcher.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/library.iml" afterPath="$PROJECT_DIR$/library/library.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java" afterPath="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java" />
     </list>
     <ignored path="AdvancedTextSwitcher.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +47,16 @@
       <file leaf-file-name="AdvTextSwitcher.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+            <state relative-caret-position="418">
+              <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1961#3010#0" expanded="true" />
+                <element signature="e#2798#2958#0" expanded="true" />
+                <element signature="e#2957#2958#0" expanded="true" />
+                <element signature="e#3009#3010#0" expanded="true" />
+                <element signature="e#3760#3761#0" expanded="true" />
+                <element signature="e#3791#3792#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1620,8 +1626,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/library/src/main/res/values-v21/styles.xml" />
         <option value="$PROJECT_DIR$/library/src/main/res/values/attrs.xml" />
-        <option value="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/Switcher.java" />
+        <option value="$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java" />
       </list>
     </option>
   </component>
@@ -2045,10 +2051,32 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="24" column="27" selection-start-line="24" selection-start-column="27" selection-end-line="24" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2070,6 +2098,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2080,6 +2114,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2101,6 +2141,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2130,6 +2176,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2159,6 +2211,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2187,6 +2245,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2215,6 +2279,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2243,6 +2313,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2332,10 +2408,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/sumimakito/android/advtextswitcher/AdvTextSwitcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
+        <state relative-caret-position="418">
+          <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1961#3010#0" expanded="true" />
+            <element signature="e#2798#2958#0" expanded="true" />
+            <element signature="e#2957#2958#0" expanded="true" />
+            <element signature="e#3009#3010#0" expanded="true" />
+            <element signature="e#3760#3761#0" expanded="true" />
+            <element signature="e#3791#3792#0" expanded="true" />
           </folding>
         </state>
       </provider>

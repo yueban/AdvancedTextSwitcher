@@ -98,11 +98,17 @@ public class AdvTextSwitcher extends TextSwitcher {
   }
 
   public void setTexts(String[] texts) {
+    setTexts(texts, true);
+  }
+
+  public void setTexts(String[] texts, boolean notifyDataSetChanged) {
     if (texts.length > 0) {
       this.mTexts = texts;
-      this.currentPos = 0;
+      if (notifyDataSetChanged) {
+        this.currentPos = 0;
+        updateDisp();
+      }
     }
-    updateDisp();
   }
 
   public void setCallback(Callback callback) {

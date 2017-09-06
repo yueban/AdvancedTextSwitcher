@@ -6,7 +6,7 @@ import java.lang.ref.WeakReference;
 public class Switcher {
   public Handler hlUpdt = new Handler();
   private WeakReference<AdvTextSwitcher> advTsViewRef;
-  private boolean isPaused;
+  private boolean isPaused = true;
   private int mDuration = 1000;
   public Runnable rbUpdt = new Runnable() {
     @Override
@@ -46,5 +46,9 @@ public class Switcher {
 
   public void pause() {
     isPaused = true;
+  }
+
+  public boolean isPaused() {
+    return isPaused;
   }
 }
